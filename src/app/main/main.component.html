@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <table>
+    <tr>
+      <td></td>
+      <td>
+        <h2>List of Todos</h2>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <ul *ngFor="let t of titles; let i = index" [routerLink]="['/todo', tids[i]]" style="cursor: pointer">
+        <li>{{t}}</li>
+      </ul>
+      <td>
+    </tr>
+  </table>
+
+</div>
+
+

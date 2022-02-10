@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Todo - {{title}}</h2>
+  <hr>
+  <form [formGroup]="form" (ngSubmit)="onUpdate()">
+    <table>
+      <tr>
+        <td><label for="title">Title</label></td>
+        <td><input type="text" id="title" formControlName="title"></td>
+      </tr>
+      <tr>
+        <td><label for="description">Description</label></td>
+        <td><input type="text" id="description" formControlName="description"></td>
+      </tr>
+      <tr>
+        <td><label for="priority">Priority</label></td>
+        <td>
+          <select id="priority" formControlName="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-success" [routerLink]="['']">Back</button>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
